@@ -16,6 +16,32 @@ Rather than optimizing for an attractive in-sample result, the project is built 
 
 The final conclusion is deliberately conservative: while the ensemble shows modest diagnostic promise on the Blend window, true forward performance on the Test window is close to random in classification terms and fragile under realistic transaction costs.
 
+## Visual Summary
+
+### Market Regime Context
+![Rolling 20-Day Volatility](assets/figure_4_4_rolling_volatility.png)
+
+### Train-Only Feature Structure
+![Feature Correlation Heatmap](assets/figure_6_1_feature_correlation_heatmap.png)
+
+### Blend Diagnostic Performance
+![Blend ROC Curve](assets/figure_11_1_blend_roc.png)
+
+### Blend Precision-Recall Performance
+![Blend Precision-Recall Curve](assets/figure_11_2_blend_pr.png)
+
+### True Forward Test Performance
+![Test ROC Curve](assets/figure_14_1_test_roc.png)
+
+### Score Distribution Shift from Blend to Test
+![Test vs Blend Score Distribution](assets/figure_14_4_test_vs_blend_score_distribution.png)
+
+### Sharpe Sensitivity to Transaction Costs
+![Sharpe Sensitivity to Costs](assets/figure_13_3_sharpe_sensitivity_costs.png)
+
+### Forward Equity Curves at 10 bps
+![Test Equity Curves at 10 bps](assets/figure_14_6_test_equity_10bps.png)
+
 ## Research Question
 
 Can a leakage-controlled blending ensemble built on daily GLD OHLCV data produce a robust and economically usable forecast of next-day direction?
@@ -176,20 +202,25 @@ That combination is more informative than an attractive backtest produced under 
 
 ```text
 .
-├── notebooks/
-│   └── gld_short_horizon_trend_blending_ensemble.ipynb
-├── report/
-│   └── CQF_Final_Project_Report.pdf
 ├── assets/
-│   ├── pipeline_diagram.png
-│   ├── blend_roc_curve.png
-│   ├── test_roc_curve.png
-│   ├── cost_sensitivity.png
-│   └── backtest_summary.png
+│   ├── figure_4_4_rolling_volatility.png
+│   ├── figure_6_1_feature_correlation_heatmap.png
+│   ├── figure_11_1_blend_roc.png
+│   ├── figure_11_2_blend_pr.png
+│   ├── figure_13_3_sharpe_sensitivity_costs.png
+│   ├── figure_14_1_test_roc.png
+│   ├── figure_14_4_test_vs_blend_score_distribution.png
+│   └── figure_14_6_test_equity_10bps.png
 ├── data/
 │   └── README.md
-├── requirements.txt
-└── README.md
+├── notebook/
+│   └── ML Kartik Vij.ipynb
+├── report/
+│   └── ML Kartik Vij REPORT.pdf
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
 
 ## Reproducibility Notes
